@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XIBViewController">
+            <connections>
+                <outlet property="lbl1" destination="Cti-4x-ByH" id="tWV-OY-qbj"/>
+                <outlet property="picker" destination="1Ko-og-7Sb" id="585-ZF-0gJ"/>
+                <outlet property="table" destination="pk2-Ob-XsL" id="2A0-Nu-DRQ"/>
+                <outlet property="tf1" destination="hbl-b9-GgF" id="25Z-Ej-6SG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cti-4x-ByH">
+                    <rect key="frame" x="54" y="28" width="234" height="45"/>
+                    <color key="backgroundColor" red="0.90062228463005511" green="0.75528383715791059" blue="0.67039485250966269" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
+                    <color key="textColor" red="0.36180584611089506" green="0.063078610650424305" blue="0.90062228463005511" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSB-Od-gwt">
+                    <rect key="frame" x="50" y="81" width="242" height="49"/>
+                    <state key="normal" title="Click"/>
+                    <connections>
+                        <action selector="btnclick:" destination="-1" eventType="touchUpInside" id="z05-A6-G3h"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbl-b9-GgF">
+                    <rect key="frame" x="61" y="148" width="251" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="sZN-oO-6gd"/>
+                    </connections>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pk2-Ob-XsL">
+                    <rect key="frame" x="18" y="195" width="284" height="162"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="X9E-An-mpt"/>
+                        <outlet property="delegate" destination="-1" id="VEE-7w-wUJ"/>
+                    </connections>
+                </tableView>
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-og-7Sb">
+                    <rect key="frame" x="0.0" y="396" width="320" height="142"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="D4s-Ma-eBb"/>
+                        <outlet property="delegate" destination="-1" id="N4a-eI-yqn"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="0.49377077532218716" green="0.86078862258616962" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="362" y="261"/>
+        </view>
+    </objects>
+</document>

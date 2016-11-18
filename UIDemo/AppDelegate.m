@@ -7,6 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "PickerViewController.h"
+#import "DateViewController.h"
+#import "TableViewController.h"
+#import "MyTableViewController.h"
+#import "XIBViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +24,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    _window=[[UIWindow alloc]init];
+    
+   // _window.frame=CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    
+    _window.frame=[UIScreen mainScreen].bounds;
+    
+    
+    LoginViewController *lvc=[[LoginViewController alloc]init];
+    
+  //  PickerViewController *pvc=[[PickerViewController alloc]init];
+    
+   // DateViewController *dvc=[[DateViewController alloc]init];
+    
+  //TableViewController *tvc=[[TableViewController alloc]init];
+    
+  //  MyTableViewController *m=[[MyTableViewController  alloc]initWithStyle:UITableViewStyleGrouped];
+    
+  //  XIBViewController *xvc=[[XIBViewController alloc]init];
+    
+    UINavigationController *navigation=[[UINavigationController alloc]initWithRootViewController:lvc];
+    
+    navigation.navigationBar.barTintColor=[UIColor orangeColor];
+    
+    self.window.rootViewController=navigation;
+    
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
